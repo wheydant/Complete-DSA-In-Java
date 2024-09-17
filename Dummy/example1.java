@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class example{
+class example1{
     static String checkDiv(int num){
         boolean flagEven = false;
         boolean flagOdd = false;
