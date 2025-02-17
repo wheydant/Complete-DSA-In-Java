@@ -1,5 +1,8 @@
 package LeetCode;
 //https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/1457944791/
+
+import java.util.Arrays;
+
 public class FindFirstAndLastPostitionOfElementInSortedArray {
     public static int getStartRange(int[] nums, int mid, int target){
             int start = mid;
@@ -75,6 +78,8 @@ public class FindFirstAndLastPostitionOfElementInSortedArray {
             int target = 4;
     
             int[] output = searchRangeON(nums, target);
+
+            System.out.println("Searching Range with O(n) : " + Arrays.toString(output));
             output = searchRangeOLogN(nums, target);
 
         for (int element : output) {
