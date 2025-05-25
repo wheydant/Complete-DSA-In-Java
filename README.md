@@ -15,38 +15,12 @@ But entering corporate enviornment I am more lean towards learning it in Java th
 
 Incomplete part
 
-- [Trees](https://www.youtube.com/playlist?list=PL9gnSGHSqcnqfctdbCQKaw5oZ9Up2cmsq)
-    - [Introduction](https://www.youtube.com/watch?v=4s1Tcvm00pA)
-      - Binary Trees
-      - Binary Search Trees
-    - [Interview questions](https://www.youtube.com/watch?v=9D-vP-jcc-Y)
-      - DFS
-      - BFS
-    - [AVL Trees](https://www.youtube.com/watch?v=CVA85JuJEn0)
-    - [Segment Tree](https://www.youtube.com/watch?v=ciHThtTVNto)
-    - Fenwick Tree / Binary Indexed Tree
-- Heaps
-    - [Introduction](https://youtu.be/Qf-TDPr0nYw)
-        - Theory
-        - Priority Queue
-        - Heapsort
-    - Two Heaps Method
-    - k-way merge
-    - Top k elements
-    - Interval problems
-- HashMap
-    - [Introduction](https://youtu.be/XLbvmMz8Fr8)
-        - Theory - how it works
-        - Comparisons of various forms
-        - Limitations and how to solve
-        - Map using LinkedList
-        - Map using Hash
-        - Chaining
-        - Probing
-    - [Huffman Coding](https://youtu.be/XLfgeaYHinM)
-    - [Karp-Rabin Strng matching algorithm](https://youtu.be/swciWFPq3NE)
-- Subarray Questions: Sliding window, Two Pointer, Kadane's Algorithm
+- Subarray Questions: Sliding window, Two Pointer, Kadane's Algorithm 
+
+    >**Note:** Replacement - [Striver](https://youtube.com/playlist?list=PLgUwDviBIf0q7vrFA_HEWcqRqMpCXzYAL&si=IMoeDMakHvS90U25)
+
 - Graphs
+     >**Note:** Replacement - [Striver](https://www.youtube.com/playlist?list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn)
     - Introduction
     - BFS
     - DFS
@@ -59,6 +33,7 @@ Incomplete part
     - Bellman ford
     - A* pathfinding Algorithm
 - Dynamic Programming
+     >**Note:** Replacement - [Striver](https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY)
     - Introduction
     - Recursion + Recursion DP + Iteration + Iteration Space Optimized
     - Complexity Analysis
@@ -68,10 +43,12 @@ Incomplete part
     - Subsequence questions
     - String DP
 - Greedy Algorithms
+     >**Note:** Replacement - [Striver](https://www.youtube.com/playlist?list=PLgUwDviBIf0rF1w2Koyh78zafB0cz7tea)
 - Tries
+     >**Note:** Replacement - [Striver](https://www.youtube.com/playlist?list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp)
 
 ### Advanced concepts apart from interviews 
-- Bitwise + DP
+- Bitwise + DP - [Alternate](https://www.youtube.com/playlist?list=PLb3g_Z8nEv1icFNrtZqByO1CrWVHLlO5g)
 - Extended Euclidean algorithm
 - Modulo Multiplicative Inverse
 - Linear Diophantine Equations

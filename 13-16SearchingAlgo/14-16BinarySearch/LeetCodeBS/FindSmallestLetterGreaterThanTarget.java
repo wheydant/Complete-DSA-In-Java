@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCodeBS;
 //https://leetcode.com/problems/find-smallest-letter-greater-than-target/submissions/1457286949/
 public class FindSmallestLetterGreaterThanTarget {
     public static char nextGreatestLetter(char[] letters, char target) {

@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCodeBS;
 // https://leetcode.com/problems/split-array-largest-summation/description/
 public class SplitArrayLargestsummation {
     public static int splitArray(int[] arr, int k){

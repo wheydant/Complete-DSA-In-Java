@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCodeBS;
 //https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class SearchInRotatedSortedArray {
     public static int findBreak(int[] nums){

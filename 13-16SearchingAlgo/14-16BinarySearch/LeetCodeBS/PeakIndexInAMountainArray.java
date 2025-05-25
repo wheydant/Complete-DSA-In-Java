@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCodeBS;
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 
 //https://leetcode.com/problems/find-peak-element/description/

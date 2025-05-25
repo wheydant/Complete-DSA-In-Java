@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCodeBS;
 // https://leetcode.com/problems/search-a-2d-matrix/
 public class SearchA2DMatrix {
     public static boolean searchMatrix(int[][] matrix, int target) {
