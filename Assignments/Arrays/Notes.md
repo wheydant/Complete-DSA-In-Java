@@ -86,13 +86,15 @@
 
 ### Medium
 1. [X] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
-2. [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
+2. [X] [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
 3. [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/)
-4. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+4. [X] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+    >**Note :** Already solved but not optimum
 5. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 6. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-7. [Jump Game](https://leetcode.com/problems/jump-game/)
-8. [Rotate Array](https://leetcode.com/problems/rotate-array/)
+7. [X] [Jump Game](https://leetcode.com/problems/jump-game/)
+    >**Note :** Done but go through the solution once
+8. [X] [Rotate Array](https://leetcode.com/problems/rotate-array/)
 9. [Sort Colors](https://leetcode.com/problems/sort-colors/)
 10. [House Robber](https://leetcode.com/problems/house-robber/)
 

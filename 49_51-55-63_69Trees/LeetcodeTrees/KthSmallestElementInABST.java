@@ -1,5 +1,7 @@
 package LeetcodeTrees;
 
+import java.util.PriorityQueue;
+
 public class KthSmallestElementInABST {
     int smallest = 0;
     int kSmall = -1;
@@ -26,6 +28,25 @@ public class KthSmallestElementInABST {
         helper(node.right, k);
     }
 
+    public int kthSmallestUsingHeap(TreeNode root, int k){
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        helperUsingHeap(root,k, minHeap);
+        for(int i =0; i < k -1; i++){
+            minHeap.poll();
+        }
+
+        return minHeap.poll();
+
+    }
+
+    private void helperUsingHeap(TreeNode node, int k, PriorityQueue<Integer> minHeap){
+        if(node == null)return;
+
+        helperUsingHeap(node.left, k, minHeap);
+        minHeap.offer(node.val);
+        helperUsingHeap(node.right, k, minHeap);
+    }
+
     public int kthSmallestEfficient(TreeNode root, int k) {
         return helperEfficient(root, k).val;
     }
@@ -43,4 +64,26 @@ public class KthSmallestElementInABST {
 
         return helperEfficient(node.right, k);
     }
+
+    private int k;
+    private int ans;
+    public int kthSmallestEasyAndEfficient(TreeNode root, int k){
+        this.k = k;
+        helper(root);
+        return ans;
+
+    }
+
+    private void helper(TreeNode node){
+        if(node == null)return;
+        //In-order
+        helper(node.left);
+        k--;
+        if(k == 0){
+            ans = node.val;
+            return;
+        }
+        helper(node.right);
+    }
+
 }

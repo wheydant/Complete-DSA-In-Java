@@ -1,6 +1,7 @@
 package LeetcodeTrees;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
@@ -28,6 +29,34 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         node.left = buildTree(Arrays.copyOfRange(preorder, 1, index + 1), Arrays.copyOfRange(inorder, 0, index));
 
         node.right = buildTree(Arrays.copyOfRange(preorder, index + 1, preorder.length), Arrays.copyOfRange(inorder, index + 1, inorder.length));
+
+        return node;
+    }
+    /*
+    Better Solution as it uses Map thus Time complexity O(n) & space O(n). While prev solution had O(n*n) coz of CopyOfRange
+    */
+    public TreeNode buildTreeHashMap(int[] preorder, int[] inorder) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < inorder.length; i++)map.put(inorder[i], i);
+
+        int[] index = new int[]{0};
+        return helper(preorder, inorder, 0, preorder.length - 1, map, index);
+    }
+
+    public TreeNode helper(int[] preorder, int[] inorder, int left, int right, HashMap<Integer, Integer> map, int[] index){
+        if(left > right)return null;
+
+        int current = preorder[index[0]];
+        index[0]++;
+        TreeNode node = new TreeNode(current);
+
+        if(left == right)return node;
+
+        int inorderIndex = map.get(current);
+
+        node.left = helper(preorder, inorder, left, inorderIndex - 1, map, index);
+        node.right = helper(preorder, inorder, inorderIndex + 1, right, map, index);
 
         return node;
     }

@@ -136,3 +136,128 @@ Cyclic sort is an in-place sorting algorithm that iteratively places each elemen
         }
         return arr;
 ```
+
+## Count Sort
+
+Non comparison sorting Algorithm good for small numbers.
+
+### Explanation 
+
+1. Find largest number.    
+2. Create array of size largest number + 1.
+3. Create frequency array count the number of occurrence of each number. Where index = original number.
+4. Traverse the frequency array and replace the original array.
+5. Instead of using array use hashMap. But items are not sorted. But as we no the maximum we can start map.get(i) i -> 0 to n.
+6. Ideally best solution is array.
+
+### Time Complexity
+
+Time Complexity = O(length of original array + length of frequency array). Same for space complexity.
+
+### Advantages 
+
+It is a stable algorithm.
+
+### Disadvantage
+
+1. Doesn't work for decimal values.
+2. Not suitable for large value.
+
+### Code
+```java
+    public static void countSort(int[] arr){
+        if(arr == null || arr.length <= 1){
+            return;
+        }
+
+        int max = arr[0];
+        for(int num : arr){
+            if(num > max)max = num;
+        }
+
+        int[] countArr = new int[max + 1];
+
+        for(int num : arr){
+            countArr[num]++;
+        }
+
+        int index = 0;
+        for(int i=0; i <= max; i++){
+            while(countArr[i] > 0){
+                arr[index] = i;
+                index++;
+                countArr[i]--;
+            }
+        }
+    }
+```
+
+## Radix Sort
+
+### Explanation
+
+1. Find the largest number with most digits.
+2. Run count sort on the basis of maximum digits amongst the number. `for(int exp = 1; max/exp > 0; exp *= 10)` Main key logic
+3. Sort the array on the basis of bases.`count[ (arr[i]/exp) % 10]++;` key logic.
+
+Sort the array using count sort digit by digit, sorting form least to max. Count sort can be used coz digits can vary between 0 to 9 only.
+
+![alt text](image-1.png)
+
+### Code
+
+```java
+    public static void RadixSort(int[] arr){
+        int max = Arrays.stream(arr).max().getAsInt();
+
+        //Count sort for every digit place.
+        for(int exp = 1; max/exp > 0; exp *= 10){
+            countSort(arr, exp);
+        }
+    }
+
+    private static void countSort(int[] arr, int exp){
+        int n = arr.length;
+        int[] output = new int[n];
+        //Max elements can be 10
+        int[] count = new int[10];
+
+        Arrays.fill(count, 0);
+
+        for(int i = 0; i < n; i++){
+            count[ (arr[i]/exp) % 10]++;
+        }
+
+        System.out.println("Count array for "+ exp+" : "+ Arrays.toString(count));
+        //This counts overall position where the digits should be
+        for(int i = 1; i < 10; i++){
+            count[i] = count[i] + count[i - 1];
+        }
+        
+        System.out.println("Count array updated for "+ exp+" : "+ Arrays.toString(count));
+
+        for(int i = n -1; i >=0 ;i--){
+            //Position of arr[i]'s base value in count matrix denotes the index in output
+            output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+            count[(arr[i] / exp) % 10]--;
+        }
+
+        System.out.println("Output array for "+ exp+" : "+ Arrays.toString(output));
+
+        System.arraycopy(output, 0, arr, 0, n);
+    }
+```
+
+### Time complexity - 
+
+Time - O(Digits * (N + base)) where base = 10
+
+### Advantage -
+
+Best for large datasets.
+
+### Disadvantage - 
+
+Not for small datasets. Space grows linearly for small dataset.
+
+>**Note :** Difficult algorithm to code needs practice.
