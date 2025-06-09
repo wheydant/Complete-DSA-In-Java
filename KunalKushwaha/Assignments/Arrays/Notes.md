@@ -90,15 +90,49 @@
 3. [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/)
 4. [X] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
     >**Note :** Already solved but not optimum
-5. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-6. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+5. [X] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+6. [X] [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 7. [X] [Jump Game](https://leetcode.com/problems/jump-game/)
     >**Note :** Done but go through the solution once
 8. [X] [Rotate Array](https://leetcode.com/problems/rotate-array/)
-9. [Sort Colors](https://leetcode.com/problems/sort-colors/)
+9. [X] [Sort Colors](https://leetcode.com/problems/sort-colors/)
 10. [House Robber](https://leetcode.com/problems/house-robber/)
+    >**Note :** Crazy code
+    ```java
+    public int rob(int[] nums) {
+        int include = 0;
+        int exclude = 0;
+        int currmax;
+
+        if (nums.length == 0) return 0;
+
+        for (int num : nums) {
+            currmax = Math.max(include, exclude);
+            include = exclude + num;
+            exclude = currmax;
+        }
+
+        return Math.max(include, exclude);
+    }
+    ```
 
 ### Hard
 1. [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/)
-2. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
-3. [Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/)
+2. [X] [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+3. [X] [Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/)
+    
+    This method uses the Euclidean algorithm to determine if the GCD of the whole array is 1, meaning that the numbers are coprime collectively. This concept is often used in number theory and problems related to Bezout's identity.
+    
+    ```java
+    public boolean isGoodArray(int[] nums) {
+        int x = nums[0], y;
+        for (int a: nums) {
+            while (a > 0) {
+                y = x % a;
+                x = a;
+                a = y;
+            }
+        }
+        return x == 1;
+    }
+    ```
