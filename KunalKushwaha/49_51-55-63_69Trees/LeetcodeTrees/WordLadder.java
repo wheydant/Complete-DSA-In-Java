@@ -54,6 +54,8 @@ public class WordLadder {
         Set<String> wordSet = new HashSet<>(wordList);
         if(!wordList.contains(endWord))return 0;
 
+        //If we didn't want to use visited array just remove the visited words from wordSet itself
+        
         Set<String> visited = new HashSet<>();
         Queue<String> q = new LinkedList<>();
 
