@@ -80,6 +80,6 @@ public class LongestSubstringWithoutRepeatingCharachters{
     }
     public static void main(String[] args) {
         String s = "abcabcbb";
-        System.out.println(lengthOfLongestSubstringTP(s));
+        System.out.println(lengthOfLongestSubstring(s));
     }
 }

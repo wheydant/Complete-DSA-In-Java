@@ -197,10 +197,26 @@ It is used if we dont have definitive return stmt but just want to rotate the wi
 
     [Video](https://www.youtube.com/watch?v=F9c7LpRZWVQ&ab_channel=takeUforward)
     
-- [ ] [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+- [X] [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+    Find minimum in Rotated Sorted Array with <= solution.
+    If mid, low and high all are same reduce low and high and compare if it's less than the stored ans.
 - [ ] [Aggressive cows](https://www.spoj.com/problems/AGGRCOW/)
 - [ ] [Book allocation](https://www.geeksforgeeks.org/allocate-minimum-number-pages/)
-- [ ] [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
-- [ ] [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/)
-- [ ] [Count smaller number after Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+
+- [X] [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+    Already solved
+
+- [X] [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/)
+    Already solved
+
+- [X] [Count smaller number after Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+
+    Create Binary search tree from right to left the index of insertion specify number of number smaller than itself to the right
+
+    Process from right to left ⬅️: We start from the end of the array and move leftwards. This allows us to maintain a sorted list of numbers we've already processed (which are to the right of the current number in the original array).
+
+    Binary search insertion ✂️: For each number, we use binary search to find the correct position where it would be inserted in the sorted list. The index where it would be inserted gives us the count of numbers smaller than it in the processed portion (which corresponds to numbers to its right in the original array).
+
+    Build result in reverse 🔄: Since we're processing from right to left, we add each count to a list and then reverse it at the end to match the original array's order.
+
 - [ ] [Divide Chocolate Problem](https://curiouschild.github.io/leetcode/2019/06/21/divide-chocolate.html)
