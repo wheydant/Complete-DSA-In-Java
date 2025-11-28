@@ -256,9 +256,25 @@ Completed - 5
     ```
 
 ## Hard
-1. [ ][Minimum Number of Flips to onvert Binary Matrix to zero matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/)
+1. [O][Minimum Number of Flips to onvert Binary Matrix to zero matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/)
 1. [ ][Minimum cost to connect two group of points](https://leetcode.com/problems/minimum-cost-to-connect-two-groups-of-points/)
-1. [ ][Find XOR Sum of All Pairs Bitwise AND](https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+
+    DP problem with bitmask
+
+1. [X][Find XOR Sum of All Pairs Bitwise AND](https://leetcode.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+
+Apply DISTRIBUTIVE PROPERTY...
+
+Lets take an example,
+Given, arr1 = [a, b, c, d, e] and arr2 = [1, 2, 3]
+
+XOR sum of all pairs
+
+= {(a & 1) ^ (a & 2) ^ (a & 3)}  ^  {(b & 1) ^ (b & 2) ^ (b & 3)}  ^  {(c & 1) ^ (c & 2) ^ (c & 3)}  ^  {(d & 1) ^ (d & 2) ^ (d & 3)}  ^  {(e & 1) ^ (e & 2) ^ (e & 3)}
+
+= (a & (1^2^3))  ^  (b & (1^2^3))  ^  (c & (1^2^3))  ^  (d & (1^2^3))  ^  (e & (1^2^3))
+
+= (a^b^c^d^e)  &  (1^2^3)
 
 # Additionally
 - Click on [*Show problem tags*](https://leetcode.com/tag/bit-manipulation/) and do the questions that contains tags of topics we have covered so far.
