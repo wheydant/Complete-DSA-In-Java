@@ -16,15 +16,31 @@
 	```
 	![alt text](image.png)
 
-1. [ ][Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) `leetcode`
-1. [ ][Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) `leetcode`
-1. [ ][Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) `leetcode`
-1. [ ][Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) `leetcode` `Snapdeal`
-1. [ ][Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) `leetcode`
-1. [ ][Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) `leetcode` `Samsung`
-1. [ ][Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)`leetcode`
-1. [ ][Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) `leetcode`
-1. [ ][Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) `leetcode`
+1. [X][Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) `leetcode`
+1. [X][Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) `leetcode`
+1. [X][Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) `leetcode`
+
+    >**Note :** Medium and crazy no head given and we need to delete the node given. Keep on assigning `node.val = node.next.val`
+
+1. [X][Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) `leetcode` `Snapdeal`
+    >**Note :** For even mid
+    ```java
+    //For first mid in even.
+    ListNode slow = head;
+    ListNode fast = head.next;
+    ```
+1. [X][Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) `leetcode`
+
+	>**Note :** https://youtu.be/D0X0BONOQhI?si=QL9I1r2vnX3zQ7BI Good Solutions. https://leetcode.com/problems/intersection-of-two-linked-lists/description/ Can't code it in workspace that neatly.
+	
+1. [X][Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) `leetcode` `Samsung`
+	Use 2 ptr slow and fast if both meet each other before fast hitting null then cycle exist
+1. [X][Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)`leetcode`
+1. [X][Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) `leetcode`
+	
+	Using normal swap algorithm is linked list style solution https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/solutions/6837974/even-faster-cpython-on-time-o1-space-usi-n81a/
+
+1. [X][Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) `leetcode`
 
 ## Medium
 1. [X][Design Twitter](https://leetcode.com/problems/design-twitter/) `leetcode`
@@ -34,14 +50,24 @@
 1. [X][ Design Linked List](https://leetcode.com/problems/design-linked-list/) `leetcode`
 1. [X][Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) `leetcode`
 
-    >**Note :** Use dummy head node
-    
-1. [ ][Reorder List](https://leetcode.com/problems/reorder-list/) `leetcode`
-1. [ ][Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) `leetcode` `HSBC`
-1. [ ][Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) `leetcode`
-1. [ ][Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) `leetcode` `TCS` `Amazon` `Microsoft` `Facebook` `Qualcomm`
-1. [ ][Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) `leetcode`
-1. [ ][Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) `leetcode`
+	>**Note :** Use dummy head node
+
+1. [X][Reorder List](https://leetcode.com/problems/reorder-list/) `leetcode`
+	Find the middle using hair and tortoise. Reverse string from mid. Merge two string one from head and other from middle.
+
+1. [O][Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) `leetcode` `HSBC`
+
+	>**Note :** Tricky problem move fast pointer first only n + 1 times then move slow and fast till fast is null
+
+1. [x][Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) `leetcode`
+
+	Tried difficult approach of not just swapping value but swapping nodes which feel difficult.
+
+1. [X][Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) `leetcode` `TCS` `Amazon` `Microsoft` `Facebook` `Qualcomm`
+1. [X][Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/) `leetcode`
+	Not reversing the string makes it slower
+1. [X][Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) `leetcode`
+	![alt text](image-1.png)
 1. [ ][Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) `leetcode` `Amazon`
 1. [ ][Rotate List](https://leetcode.com/problems/rotate-list/) `leetcode` `Microsoft`
 1. [ ][Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) `leetcode`

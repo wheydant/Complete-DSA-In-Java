@@ -6,16 +6,21 @@
 	>**Note :** Great Optimized solution Monotonic Stack with Question constraint loved it.
 
 1. [X][Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) `leetcode`
-1. [ ][Min Stack](https://leetcode.com/problems/min-stack/) `leetcode`
-1. [ ][Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/) `leetcode`
-1. [ ][Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) `leetcode`
-1. [ ][Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/) `leetcode`
-1. [ ][Reverse First K elements of Queue](https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1/) `GFG`
+1. [X][Min Stack](https://leetcode.com/problems/min-stack/) `leetcode`
+1. [X][Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/) `leetcode`
+1. [X][Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) `leetcode`
+1. [X][Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/) `leetcode`
+
+	Had a hunch should have used simple array but used stack instead leading to least optimized solution
+	
+1. [X][Reverse First K elements of Queue](https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1/) `GFG`
 1. [ ][Delete middle element of a stack](https://practice.geeksforgeeks.org/problems/delete-middle-element-of-a-stack/1/) `GFG`
 1. [ ][Inorder Traversal (Iterative)](https://practice.geeksforgeeks.org/problems/inorder-traversal-iterative/1/) `GFG`
 1. [ ][Preorder traversal (Iterative)](https://practice.geeksforgeeks.org/problems/preorder-traversal-iterative/1/) `GFG`
-1. [ ][Flood fill](https://leetcode.com/problems/flood-fill/) `leetcode`
-1. [ ][Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) `leetcode`
+1. [X][Flood fill](https://leetcode.com/problems/flood-fill/) `leetcode`
+	Using BFS to solve the already solved problem
+1. [X][Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) `leetcode`
+	Use Another stack to push new value to bottom
 ## Medium
 1. [X][Design a Stack With Increment Operation](https://leetcode.com/problems/design-a-stack-with-increment-operation/) `leetcode`
 
@@ -27,9 +32,12 @@
 
 	>**Note :** `String rep = temp.toString().repeat(n)` multiply a string builder n times
 	
-1. [ ][Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) `leetcode`
-1. [ ][132 Pattern](https://leetcode.com/problems/132-pattern/) `leetcode`
-1. [ ][Design circular Queue](https://leetcode.com/problems/design-circular-queue/) `leetcode`
+1. [X][Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) `leetcode`
+1. [O][132 Pattern](https://leetcode.com/problems/132-pattern/) `leetcode`
+
+	>**Note :** Crazy question traverse right to left keep a monotonic max to small and pop if it breaks but keep in storage as recent max if anything is found smaller than that max then true. 1, 3, 4, 0, 2. Stack - 2 ; stack - 2, 0;  Stack - 4, max - 2; Stack - 4, 3, max - 2; Thus 1 is found which is smaller than 2.
+
+1. [X][Design circular Queue](https://leetcode.com/problems/design-circular-queue/) `leetcode`
 1. [ ][Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/) `leetcode`
 1. [ ][Design Front Middle Back Queue](https://leetcode.com/problems/design-front-middle-back-queue/) `leetcode`
 1. [ ][Circular tour](https://practice.geeksforgeeks.org/problems/circular-tour/1) `GFG` `Amex` `Amazon`
