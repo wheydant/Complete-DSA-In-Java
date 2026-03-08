@@ -24,4 +24,10 @@ public class TreeNode {
 		System.out.print(root.val + " ");
 		inOrder(root.right);
 	}
+
+    @Override
+    public String toString() {
+        return this.val + "";
+    }
+
 }

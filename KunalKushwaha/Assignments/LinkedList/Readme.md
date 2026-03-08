@@ -1,5 +1,9 @@
 # Problems
 
+## Notes
+
+Doubly LinkedList is the best when we want to insert or remove elements in constant time. See question LRU Cache
+
 ## Easy
 1. [X][Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) `leetcode`
 1. [X][Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) `leetcode`
@@ -68,34 +72,49 @@
 	Not reversing the string makes it slower
 1. [X][Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) `leetcode`
 	![alt text](image-1.png)
-1. [ ][Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) `leetcode` `Amazon`
-1. [ ][Rotate List](https://leetcode.com/problems/rotate-list/) `leetcode` `Microsoft`
-1. [ ][Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) `leetcode`
-1. [ ][LRU Cache](https://leetcode.com/problems/lru-cache/) `leetcode`
-1. [ ][Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) `leetcode` `Amex`
-1. [ ][Design Browser History](https://leetcode.com/problems/design-browser-history/) `leetcode`
-1. [ ][Partition list](https://leetcode.com/problems/partition-list/) `leetcode`
+1. [X][Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) `leetcode` `Amazon`
+	>**Note :** Crazy use of stack
+1. [X][Rotate List](https://leetcode.com/problems/rotate-list/) `leetcode` `Microsoft`
+	Calculate the length attach tail to head count how many nodes to skip and then form the final linkedlist
+1. [X][Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) `leetcode`
+1. [X][LRU Cache](https://leetcode.com/problems/lru-cache/) `leetcode`
+
+	Logic was right but giving TLE as I was using key to remove object
+	>**Note :** queue.remove(Object) scans the queue and removes that object.
+	>**Note :** Crazy concept of [linkedHashMap](https://www.geeksforgeeks.org/java/linkedhashmap-class-in-java/) and this has a function which can be used to [removeEldestEntry](https://www.geeksforgeeks.org/java/linkedhashmap-removeeldestentry-method-in-java/) LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder) [ChatGPT search linkedHashMap](https://chatgpt.com/g/g-p-690885efb2048191b6886a5801dd0ab3-dsa/c/692d8a46-a1b4-8322-b5f5-4fbeaf8941e5)
+
+	>**Note :** Brilliant solution using Doubly linked list dummy head and tail
+
+
+1. [X][Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) `leetcode` `Amex`
+1. [X][Design Browser History](https://leetcode.com/problems/design-browser-history/) `leetcode`
+	Easy doubly linked list
+1. [X][Partition list](https://leetcode.com/problems/partition-list/) `leetcode`
 1. [ ][Find first node of loop in a linked list](https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/) `GFG`
-1. [ ][Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)`leetcode`
-1. [ ][Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) `leetcode`
-1. [ ][Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)`leetcode`
-1. [ ][ Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/)`leetcode` 
-1. [ ][ Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)`leetcode`
-1. [ ][Sort List](https://leetcode.com/problems/sort-list/)`leetcode`
-1. [ ][ Merge In Between Linked Lists](https://leetcode.com/problems/merge-in-between-linked-lists/)`leetcode`
-1. [ ][Design Browser History](https://leetcode.com/problems/design-browser-history/)`leetcode`
-1. [ ][Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)`leetcode`
-1. [ ][Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)`leetcode`
-1. [ ][ Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)`leetcode`
-1. [ ][Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)`leetcode`
-1. [ ][Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/)`leetcode`
-1. [ ][ Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/)`leetcode`
+1. [X][Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)`leetcode`
+1. [O][Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) `leetcode`
+	Couldn't think of traversing the Linked List again to remove the nodes stored in hashmap of prefixSum and nodes
+1. [X][Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)`leetcode`
+1. [X][ Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/)`leetcode`
+	>**Note :** Very difficult Good way to reverse linkedList and keeping a variable which goes to end 
+1. [X][ Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)`leetcode`
+1. [X][Sort List](https://leetcode.com/problems/sort-list/)`leetcode`
+1. [X][Not found - Merge In Between Linked Lists](https://leetcode.com/problems/merge-in-between-linked-listWs/)`leetcode`W
+1. [X][Design Browser History](https://leetcode.com/problems/design-browser-history/)`leetcode`
+1. [X][Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)`leetcode`
+1. [X][Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)`leetcode`
+1. [X][Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)`leetcode`
+	Was thinking optimized solution only, due to lack of practice was not confident
+1. [X][Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)`leetcode`
+1. [X][Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/)`leetcode`
+1. [X][Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/)`leetcode`
 
 ## Hard
-1. [ ][Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) `leetcode`
+1. [X][Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) `leetcode`
+	Earlier solved with one crazy logic `if next: node.next = reverse(next, k, len)`
 1. [ ][LFU Cache](https://leetcode.com/problems/lfu-cache/) `leetcode` `Google`
 1. [ ][Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) `leetcode`
-1. [ ][Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/) `GFG` `Google` `Flipkart`
+1. [ ][Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/) `GFG` `Google` `Flipkart` - Theory
 1. [ ][All O'one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) `leetcode`
 1. [ ][Design Skiplist](https://leetcode.com/problems/design-skiplist/) `leetcode`
 
