@@ -112,10 +112,15 @@ Doubly LinkedList is the best when we want to insert or remove elements in const
 ## Hard
 1. [X][Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) `leetcode`
 	Earlier solved with one crazy logic `if next: node.next = reverse(next, k, len)`
-1. [ ][LFU Cache](https://leetcode.com/problems/lfu-cache/) `leetcode` `Google`
-1. [ ][Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) `leetcode`
-1. [ ][Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/) `GFG` `Google` `Flipkart` - Theory
-1. [ ][All O'one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) `leetcode`
-1. [ ][Design Skiplist](https://leetcode.com/problems/design-skiplist/) `leetcode`
+1. [X][LFU Cache](https://leetcode.com/problems/lfu-cache/) `leetcode` `Google`
+	Fucker Question [Neet Code](https://www.youtube.com/watch?v=bLEIHn-DgoA)
+1. [X][Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) `leetcode`
+	Use of priority queue to its finest great question
+1. [X][Clone a linked list with next and random pointer](https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/) `GFG` `Google` `Flipkart` - Theory
+	Crazy approach without using hashmap [Striver](https://www.youtube.com/watch?v=q570bKdrnlw)
+1. [X][All O'one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) `leetcode`
+	WTF is even this [Video](https://www.youtube.com/watch?v=rtIVvQ1z8jY)
+1. [X][Design Skiplist](https://leetcode.com/problems/design-skiplist/) `leetcode`
+	>**Note :** Mimic Coin Flip `private final Random random = new Random();` `random.nextBoolean()`. Very intuitive Question it is what it is. Design in canonical manner and it will work. Widely used algorithm in RDBMS. [Video](https://youtu.be/41K5A7iYJd8?si=YZZm796Rsf-m7Aa3)
 
 1. [X][Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) `leetcode`

@@ -90,14 +90,19 @@
 1. [X][Path Sum III](https://leetcode.com/problems/path-sum-iii/) `leetcode`
 	Brute Force also works, but we can keep a dict and check if the target_sum - curr_sum exists earlier or not
 1. [X][Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/) `leetcode`
-1. [ ][Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree/) `leetcode`
-1. [ ][Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/) `leetcode`
-1. [ ][Logical OR of Two Binary Grids Represented as Quad-Trees](https://leetcode.com/problems/logical-or-of-two-binary-grids-represented-as-quad-trees/) `leetcode`
-1. [ ][Flip Binary Tree To Match Preorder Traversal](https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/) `leetcode`
+1. [X][Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree/) `leetcode`
+	Performing DFS in this type of input needed use of graph
+1. [X][Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/) `leetcode`
+	>**Note :** Crazy and interesting question Finding Last Common ancestor was the key 
+1. [X][Logical OR of Two Binary Grids Represented as Quad-Trees](https://leetcode.com/problems/logical-or-of-two-binary-grids-represented-as-quad-trees/) `leetcode`
+	Pre-requisite [Construct Quad Tree](https://leetcode.com/problems/construct-quad-tree/description/) [Neet Code](https://www.youtube.com/watch?v=UQ-1sBMV0v4). Little headache [Video](https://www.youtube.com/watch?v=j2wuN6ziswE&t=5s)
+1. [X][Flip Binary Tree To Match Preorder Traversal](https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/) `leetcode`
+	Interesting Question needed bit help but was interesting
 
 ## Hard
 
-1. [ ][Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) `leetcode`
+1. [X][Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) `leetcode`
+	>**Note :** **Binary Lifting** Implementation. Memorize the solution. [Concept](https://www.youtube.com/watch?v=oib-XsjFa-M) for code refer [Python](./KthAncestorOfATreeNode.py)
 1. [ ][Difference Between Maximum and Minimum Price Sum](https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/) `leetcode`
 1. [ ][Merge BSTs to Create Single BST](https://leetcode.com/problems/merge-bsts-to-create-single-bst/) `leetcode`
 1. [ ][Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/) `leetcode`
