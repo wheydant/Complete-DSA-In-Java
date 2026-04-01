@@ -101,16 +101,47 @@
 
 ## Hard
 
+Hard questions of tree has lot of dependencies on the graph questions
+
 1. [X][Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) `leetcode`
 	>**Note :** **Binary Lifting** Implementation. Memorize the solution. [Concept](https://www.youtube.com/watch?v=oib-XsjFa-M) for code refer [Python](./KthAncestorOfATreeNode.py)
-1. [ ][Difference Between Maximum and Minimum Price Sum](https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/) `leetcode`
-1. [ ][Merge BSTs to Create Single BST](https://leetcode.com/problems/merge-bsts-to-create-single-bst/) `leetcode`
-1. [ ][Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/) `leetcode`
-1. [ ][Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) `leetcode`
-1. [ ][Collect Coins in a Tree](https://leetcode.com/problems/collect-coins-in-a-tree/) `leetcode`
-1. [ ][Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) `leetcode`
-1. [ ][Tree of Coprimes](https://leetcode.com/problems/tree-of-coprimes/) `leetcode`
-1. [ ][Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/) `leetcode`
+1. [O][Difference Between Maximum and Minimum Price Sum](https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/) `leetcode`
+	>**Note :** Re-route Algo cannot find proper solution
+1. [X][Merge BSTs to Create Single BST](https://leetcode.com/problems/merge-bsts-to-create-single-bst/) `leetcode`
+	>**Note :** Very Messed up, must visit later. [Video](https://www.youtube.com/watch?v=tMPUGvlHBXY). [Solution](./MergeBSTsToCreateSingleBST.py) maintained with proper code comment.
+	![alt text](image-1.png)
+1. [X][Frog Position After T Seconds](https://leetcode.com/problems/frog-position-after-t-seconds/) `leetcode`
+	>**Note :** All correct assumption cases, little wrong implementation. Learnt edges to tree. Fetch all neighbors except root
+	```py
+        graph = collections.defaultdict(list)
+        for u,v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
+		children = [nei for nei in graph[node] if nei != parent]
+	```
+1. [X][Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) `leetcode`
+	>**Note :** Crazy logic [Video](http://youtube.com/watch?v=eEfW7CLbhvU) all [solutions](./HeightOfBinaryTreeAfterSubtreeRemovalQueries.py), ChatGPT`dfs2(node.right, depth + 1, max(max_height_from_above, depth + 1 + left_h))`
+1. [O][Collect Coins in a Tree](https://leetcode.com/problems/collect-coins-in-a-tree/) `leetcode`
+	>**Note :** If we are not using collections.defaultdict(list) to construct tree over edges
+	```py
+		graph = {}
+		for u, v in edges:
+			graph.setdefault(u, []).append(v)
+			graph.setdefault(v, []).append(u)
+	```
+	>**Note :** Very Important question asked a lot [Ref Video](https://www.youtube.com/watch?v=wUmuRsTGQxs&t=2265s). In Out DP, Re-rooting. Optimized solution in code [Code](./CollectCoinsInATree.py).
+	>**Note :** Make copy of list `new_list = list` copies pointer and edits original list `new_list = list[:]` creates a copy or `new_list = list.copy()`
+1. [X][Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) `leetcode`
+1. [X][Tree of Coprimes](https://leetcode.com/problems/tree-of-coprimes/) `leetcode`
+	Very Nice Question
+	Steps
+		- Pre-Calculate CoPrimes 1-50
+		- Create Graph Adj List
+		- Store Ancestor as we go down
+		- Do DFS
+			- Find the best depth GCD ancestor
+		- Traceback ancestor list as we go upward
+1. [X][Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/) `leetcode`
 1. [ ][Minimize the Total Price of the Trips](https://leetcode.com/problems/minimize-the-total-price-of-the-trips/) `leetcode`
 1. [ ][Number Of Ways To Reconstruct A Tree](https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree/) `leetcode`
 1. [ ][Smallest Missing Genetic Value in Each Subtree](https://leetcode.com/problems/smallest-missing-genetic-value-in-each-subtree/) `leetcode`
