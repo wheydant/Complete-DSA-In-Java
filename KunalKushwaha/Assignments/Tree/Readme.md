@@ -1,5 +1,13 @@
 # Problems
 
+## Concept
+
+### Re-rooting
+
+It is a technique of calculating answer for one node as root then finding changing pattern for adjacent nodes if they are considered as root 
+
+Great Explanation - [Video](https://www.youtube.com/watch?v=5feZxOegb1c) 
+
 ## Easy
 
 1. [X][Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) `leetcode`
@@ -142,15 +150,55 @@ Hard questions of tree has lot of dependencies on the graph questions
 			- Find the best depth GCD ancestor
 		- Traceback ancestor list as we go upward
 1. [X][Maximum Sum BST in Binary Tree](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/) `leetcode`
-1. [ ][Minimize the Total Price of the Trips](https://leetcode.com/problems/minimize-the-total-price-of-the-trips/) `leetcode`
-1. [ ][Number Of Ways To Reconstruct A Tree](https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree/) `leetcode`
-1. [ ][Smallest Missing Genetic Value in Each Subtree](https://leetcode.com/problems/smallest-missing-genetic-value-in-each-subtree/) `leetcode`
-1. [ ][Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) `leetcode`
-1. [ ][Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) `leetcode`
-1. [ ][Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/) `leetcode`
-1. [ ][Count Number of Possible Root Nodes](https://leetcode.com/problems/count-number-of-possible-root-nodes/) `leetcode`
-1. [ ][Count Ways to Build Rooms in an Ant Colony](https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/) `leetcode`
-1. [ ][Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/) `leetcode`
-1. [ ][Create Components With Same Value](https://leetcode.com/problems/create-components-with-same-value/) `leetcode`
-1. [ ][Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) `leetcode`
-1. [ ][Longest Path With Different Adjacent Characters](https://leetcode.com/problems/longest-path-with-different-adjacent-characters/) `leetcode`
+1. [X][Minimize the Total Price of the Trips](https://leetcode.com/problems/minimize-the-total-price-of-the-trips/) `leetcode`
+	Lovely Question Precompute Paths, then for each node calculate half and not half and find min. Finding path by returning True/False is also beauty
+1. [O][Number Of Ways To Reconstruct A Tree](https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree/) `leetcode`
+	What the fuck is this I just can't understand any solution. [Optimized Solution](./NumberOfWaysToReconstructATree.py) is Placed Go through it later might understand.
+1. [X][Smallest Missing Genetic Value in Each Subtree](https://leetcode.com/problems/smallest-missing-genetic-value-in-each-subtree/) `leetcode`
+	>**Note :** `for i, p in enumerate(parents):` to get i and value of i
+1. [X][Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) `leetcode`
+	>**Note :** Used Tree Map, it is primarily used when you need to maintain a set of key-value pairs in a specific, sorted order based on their keys. `colMap.computeIfAbsent(col, x -> new ArrayList<>()).add(val);` If an array fails to exist for that column it creates one on the go and add the new value
+1. [X][Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) `leetcode`
+	Easy and Simple solution [Youtube](https://www.youtube.com/watch?v=VBxiavZYfoA)
+1. [X][Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/) `leetcode`
+	>**Note :** Very Math heavy problem [Video](https://www.youtube.com/watch?v=_ZcQLiyQ3yM) Ways to find nCr -> python `comb(n,r)`. But java 
+	```java
+		table=new long[n+1][n+1];
+		for (int i = 0; i < n + 1; ++i) {
+			Arrays.fill(table[i],1);
+			for (int j = 1; j < i; ++j) {
+				table[i][j] = (table[i - 1][j - 1] + table[i - 1][j]) % mod;
+			}
+		}
+	```
+1. [X][Count Number of Possible Root Nodes](https://leetcode.com/problems/count-number-of-possible-root-nodes/) `leetcode`
+	Video in Re-rooting example
+1. [X][Count Ways to Build Rooms in an Ant Colony](https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/) `leetcode`
+	>**Note :** Way more harder version of Number of ways to reorder array to get sane BST. [Video](https://www.youtube.com/watch?v=MGKLPpR6NKI).
+	```py
+        # Competitve way to find nCr just Learn it
+		# combinations = math.comb(curNodeCnt+subTreeNodeCnt, curNodeCnt)
+		# combinations = (fact[curNodeCnt+subTreeNodeCnt]*invFact[curNodeCnt]*invFact[subTreeNodeCnt])%mod
+        mod = 10**9+7
+        n = len(prevRoom)
+        fact = [0]*n
+        fact[0] = 1
+        invFact = [0]*n
+        invFact[0] = pow(1, mod - 2, mod)
+
+        for i in range(1, n):
+            fact[i] = (i*fact[i - 1])%mod
+            invFact[i] = pow(fact[i], mod - 2, mod)
+	```
+1. [X][Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/) `leetcode`
+	>**Note :** Great Question, [great explanation](https://www.youtube.com/watch?v=3IomMslYOOY). Story Board - 
+		1. Assume root is 0
+		2. n^2 is acceptable time complexity, Thus we will traverse all the node pairs who we can split
+		3. Pre Subtree XoR calculation keeps the complexity n^2 (Individual Question on its own XOR of subtree)
+		4. Tricky party if the split is amongst Ancestor and Descendant then issue of duplicate XoR values. Follow time based approach to keep track of Ancestor Descendant (Individual Question is Ancestor Descendant)
+
+1. [X][Create Components With Same Value](https://leetcode.com/problems/create-components-with-same-value/) `leetcode`
+	Bit Easy Question [Youtube](https://www.youtube.com/watch?v=ZmyVX4FT9m4)
+1. [X][Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) `leetcode`
+1. [X][Longest Path With Different Adjacent Characters](https://leetcode.com/problems/longest-path-with-different-adjacent-characters/) `leetcode`
+	>**Note :** In python `candidate = heapq.nlargest(2, candidate)` fetches top 2 values from the list in this case candidate = [0, 2, 3, 5] then after nlargest candidate = [3, 5]

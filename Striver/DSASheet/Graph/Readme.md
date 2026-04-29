@@ -4,11 +4,11 @@
 
 ## Learning
 
-1. [ ][Connected Component](https://takeuforward.org/data-structure/connected-components)
-2. [ ][DFS](https://takeuforward.org/data-structure/depth-first-search-dfs)
+1. [X][Connected Component](https://takeuforward.org/data-structure/connected-components)
+2. [X][DFS](https://takeuforward.org/data-structure/depth-first-search-dfs)
 
 ## BFS/DFS
-1. [ ][Number of Provinces](https://leetcode.com/problems/number-of-provinces/description/)
+1. [X][Number of Provinces](https://leetcode.com/problems/number-of-provinces/description/)
 2. [ ][Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)
 3. [ ][Flood Fill Algorithm](https://leetcode.com/problems/flood-fill/)
 4. [ ][Cycle Detection in Undirected Graph(BFS)](https://leetcode.com/problems/course-schedule/)
